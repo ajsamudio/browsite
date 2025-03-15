@@ -1,8 +1,24 @@
+
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body {
     margin: 0;
     font-family: "New Amsterdam", sans-serif;
     font-size: 23px;
-    background-color: #A7B89D;
+    background: linear-gradient(-45deg, #A7B89D, #C3D9B2, #E0E7D4, #F0F4E8);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
 img{
@@ -17,6 +33,16 @@ img{
     justify-content: center;
     height: 100vh;
     padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .image-section {
@@ -27,11 +53,16 @@ img{
 
 
 .image-section img {
+    transition: transform 0.5s ease;
     border-radius: 20px;
     width: 80%;
     max-width: 400px;
     max-height: 50%;
     height: auto;
+}
+
+.image-section img:hover, .Cimage-section img:hover {
+    transform: scale(1.05);
 }
 
 .text-section {
@@ -50,6 +81,17 @@ img{
     margin-bottom: 30px;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 .appointment-btn {
@@ -60,6 +102,8 @@ img{
     text-decoration: none;
     border-radius: 5px;
     font-size: 1em;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease;
 }
 
 .appointment-btn span {
@@ -68,7 +112,8 @@ img{
 }
 
 .appointment-btn:hover {
-    background-color: #333;
+    animation: none;
+    background-color: #555;
 }
 
 
@@ -76,9 +121,7 @@ img{
 
 
 .service-offered {
-    background-color: #A7B89D;
     text-align: center;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,13 +143,15 @@ img{
 
 .service-img {
     /* border: 5px solid white; */
-    border-radius: 15% !important;
-    
+    transition: transform 0.3s ease;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 35%;
+}
 
+.service:hover img {
+    transform: rotate(15deg);
 }
 
 .service h3 p{
@@ -114,25 +159,46 @@ img{
     text-align: start;
 }
 
-.service {
+/* .service {
     width: 50%;
     display: inline-block;
     text-align: center;
-    
-    /* margin: 1%; */
+} */
+
+.service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 .closer{
     display: flex;
-    background-color: #A7B89D;
     padding: 10%;
     align-items: center;
     width: 120%;
 }
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 .Ctext-section h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
     font-size: 2.5em;
     margin-bottom: 20px;
 }
