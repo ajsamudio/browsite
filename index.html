@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,26 +17,53 @@
 
     <div class="header">
         <div class="image-section">
-            <img src="img/brow2.jpg" alt="Brows & Lashes">
+            <div id="headerCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/brow.jpg" class="d-block w-100" alt="Brows & Lashes 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/brow2.jpg" class="d-block w-100" alt="Brows & Lashes 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/brow3.jpg" class="d-block w-100" alt="Brows & Lashes 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/brow4.jpg" class="d-block w-100" alt="Brows & Lashes 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/brow5.jpg" class="d-block w-100" alt="Brows & Lashes 5">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#headerCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#headerCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
         <div class="text-section">
             <h1>Dragonflyy Studio</h1>
             <p>Enhancing Your Natural Beauty</p>
-            <a href="https://www.instagram.com/stories/highlights/18000291851244523/" class="appointment-btn">Book Appointment Now <span>→</span></a>
+            <a href="#booking" class="appointment-btn">Book
+                Appointment Now <span>→</span></a>
         </div>
-    </div>    
+    </div>
 
     <div class="service-offered">
         <div class="container-service">
-            
+
             <div class="services-header">
                 Services Offered
             </div>
 
             <div class="service-img">
-                <img src="img/brow3.jpg" width="70%" height="70%"  class="center" alt="Client Works Carousel">
+                <img src="img/brow3.jpg" width="70%" height="70%" class="center" alt="Client Works Carousel">
             </div>
-            
+
             <div class="services-section">
 
                 <div class="service">
@@ -48,26 +77,41 @@
                         Lash Lifts: $50
                     </p>
                 </div>
-    
+
                 <div class="service">
                     <h3>Eyebrows</h3>
-                <p>
-                    Lamination: $70<br>
-                    Henna Tint: $40
-                </p>
+                    <p>
+                        Lamination: $70<br>
+                        Henna Tint: $40
+                    </p>
                 </div>
 
                 <div class="service">
                     <h3>Extras</h3>
-                <p>
-                    Foreign Fills: +$10<br>
-                    Removals: $20<br>
-                    Lash Aftercare Kit: $10
-                </p>
+                    <p>
+                        Foreign Fills: +$10<br>
+                        Removals: $20<br>
+                        Lash Aftercare Kit: $10
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Calendly Booking Section -->
+    <div id="booking" class="booking-container">
+        <div class="services-header">
+            Book Your Appointment
+        </div>
+        <div class="calendly-placeholder">
+            <!-- PASTE YOUR CALENDLY CODE HERE -->
+            <p style="text-align: center; padding: 20px;">
+                [Calendly Calendar will appear here]<br>
+                <small>Please paste your Calendly embed code in this section.</small>
+            </p>
+        </div>
+    </div>
+
 
 
     <div class="closer">
@@ -76,25 +120,34 @@
             <h1>Book Now!</h1>
             <p> Home Based<br>
                 La Palma, CA.<br>
-                Email: 
+                Email:
                 <a href="mailto:Miaj.k.04@gmail.com">
-                Miaj.k.04@gmail.com
+                    Miaj.k.04@gmail.com
                 </a>
                 <br>
-                Instagram: 
+                Instagram:
                 <a href="https://www.instagram.com/dragonflyybar/" target="_blank">
-                @dragonflyybar
+                    @dragonflyybar
                 </a>
             </p>
             <p class="contact">Contact us &rarr;</p>
         </div>
 
         <div class="Cimage-section">
-                <img src="img/brow4.jpg" alt="Makeup Palette">
+            <img src="img/brow4.jpg" alt="Makeup Palette">
         </div>
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

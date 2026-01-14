@@ -1,12 +1,12 @@
-
-
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -21,14 +21,14 @@ body {
     animation: gradientBG 15s ease infinite;
 }
 
-img{
-    border-radius:15px;
+img {
+    border-radius: 15px;
     border: 5px solid #d3dbce;
 }
 
 .header {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -40,6 +40,7 @@ img{
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -61,7 +62,8 @@ img{
     height: auto;
 }
 
-.image-section img:hover, .Cimage-section img:hover {
+.image-section img:hover,
+.Cimage-section img:hover {
     transform: scale(1.05);
 }
 
@@ -85,9 +87,11 @@ img{
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
@@ -134,6 +138,7 @@ img{
     font-size: 2em;
     margin-bottom: 2%;
 }
+
 .services-section {
     display: flex;
     flex-direction: column;
@@ -154,7 +159,7 @@ img{
     transform: rotate(15deg);
 }
 
-.service h3 p{
+.service h3 p {
     font-size: 1.5em;
     text-align: start;
 }
@@ -179,7 +184,7 @@ img{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.closer{
+.closer {
     display: flex;
     padding: 10%;
     align-items: center;
@@ -190,6 +195,7 @@ img{
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
@@ -202,11 +208,13 @@ img{
     font-size: 2.5em;
     margin-bottom: 20px;
 }
+
 .Ctext-section p {
     font-size: 1em;
     color: #333;
     line-height: 1.6;
 }
+
 .Ctext-section .contact {
     margin-top: 20px;
     font-weight: bold;
