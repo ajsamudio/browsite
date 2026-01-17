@@ -137,6 +137,7 @@ img {
 .services-header {
     font-size: 2em;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 .services-section {
@@ -188,7 +189,8 @@ img {
     display: flex;
     padding: 10%;
     align-items: center;
-    width: 120%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @keyframes typing {
@@ -225,4 +227,97 @@ img {
     margin-left: 30%;
     max-height: 50%;
     width: 50%;
+}
+
+.booking-container {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .header {
+        flex-direction: row;
+        height: auto;
+        padding-top: 50px;
+        align-items: center;
+    }
+
+    .image-section {
+        width: 40%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-section {
+        width: 60%;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .text-section h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    .text-section p {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    .appointment-btn {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    .service-offered {
+        flex-direction: column;
+    }
+
+    .service-img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .services-section {
+        width: 100%;
+    }
+
+    .service {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .closer {
+        flex-direction: column;
+        padding: 5%;
+        width: 100%;
+    }
+
+    .Ctext-section,
+    .Cimage-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Cimage-section img {
+        margin-left: 0;
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .services-header {
+        font-size: 1.5em;
+    }
+
+    .calendly-inline-widget {
+        height: 850px !important;
+    }
 }
