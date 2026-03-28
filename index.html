@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brows & Lashes Studio</title>
+    <title>Dragonflybar Studio | Brows & Lashes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -15,9 +17,27 @@
 
 <body>
 
-    <div class="header">
-        <div class="image-section">
-            <div id="headerCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Sparkle Canvas -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-brand">Dragonflybar</div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#booking">Book Now</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div id="headerCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/brow.jpg" class="d-block w-100" alt="Brows & Lashes 1">
@@ -45,100 +65,178 @@
                 </a>
             </div>
         </div>
-        <div class="text-section">
-            <h1>Dragonflyy Studio</h1>
-            <p>Enhancing Your Natural Beauty</p>
-            <a href="#booking" class="appointment-btn">Book
-                Appointment Now <span>→</span></a>
+        <div class="hero-content">
+            <p class="hero-tagline fade-in">Est. La Palma, CA</p>
+            <h1 class="fade-in">Dragonflybar Studio</h1>
+            <div class="hero-divider fade-in"></div>
+            <p class="hero-subtitle fade-in">Enhancing Your Natural Beauty</p>
+            <a href="#booking" class="btn-book fade-in">Book Appointment <span>&rarr;</span></a>
         </div>
-    </div>
+    </header>
 
-    <div class="service-offered">
-        <div class="container-service">
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-header fade-in">
+            <p class="section-subtitle">What We Offer</p>
+            <h2>Services & Pricing</h2>
+            <div class="header-line"></div>
+        </div>
 
-            <div class="services-header">
-                Services Offered
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">&#10024;</div>
+                <h3>Lashes & Fill</h3>
+                <ul class="price-list">
+                    <li><span>Classic</span><span>$50 / $30</span></li>
+                    <li><span>Hybrid</span><span>$55 / $35</span></li>
+                    <li><span>Volume</span><span>$60 / $45</span></li>
+                    <li><span>Stargazer</span><span>$55</span></li>
+                    <li><span>Foreign Fills</span><span>+$10</span></li>
+                    <li><span>Lash Lifts</span><span>$50</span></li>
+                </ul>
             </div>
 
-            <div class="service-img">
-                <img src="img/brow3.jpg" width="70%" height="70%" class="center" alt="Client Works Carousel">
+            <div class="service-card fade-in">
+                <div class="service-icon">&#9883;</div>
+                <h3>Eyebrows</h3>
+                <ul class="price-list">
+                    <li><span>Lamination</span><span>$70</span></li>
+                    <li><span>Henna Tint</span><span>$40</span></li>
+                </ul>
             </div>
 
-            <div class="services-section">
+            <div class="service-card fade-in">
+                <div class="service-icon">&#10022;</div>
+                <h3>Extras</h3>
+                <ul class="price-list">
+                    <li><span>Foreign Fills</span><span>+$10</span></li>
+                    <li><span>Removals</span><span>$20</span></li>
+                    <li><span>Aftercare Kit</span><span>$10</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <div class="service">
-                    <h3>Lashes/Fill</h3>
-                    <p>
-                        Classic: $50/30<br>
-                        Hybrid: $55/35<br>
-                        Volume: $60/45<br>
-                        Stargazer: $55<br>
-                        Foreign Fills: +$10<br>
-                        Lash Lifts: $50
-                    </p>
+    <!-- Before & After Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header fade-in">
+            <p class="section-subtitle">See the Difference</p>
+            <h2>Our Transformations</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="img/brow.jpg" alt="Transformation 1">
+                <div class="gallery-overlay">
+                    <span>Lash Extensions</span>
                 </div>
-
-                <div class="service">
-                    <h3>Eyebrows</h3>
-                    <p>
-                        Lamination: $70<br>
-                        Henna Tint: $40
-                    </p>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/brow2.jpg" alt="Transformation 2">
+                <div class="gallery-overlay">
+                    <span>Volume Set</span>
                 </div>
-
-                <div class="service">
-                    <h3>Extras</h3>
-                    <p>
-                        Foreign Fills: +$10<br>
-                        Removals: $20<br>
-                        Lash Aftercare Kit: $10
-                    </p>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/brow3.jpg" alt="Transformation 3">
+                <div class="gallery-overlay">
+                    <span>Brow Lamination</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="img/brow5.jpg" alt="Transformation 4">
+                <div class="gallery-overlay">
+                    <span>Classic Lashes</span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-header fade-in">
+            <p class="section-subtitle">Client Love</p>
+            <h2>What They Say</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Absolutely love my lashes! They look so natural and last so long.
+                    Best lash artist in La Palma hands down."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">&mdash; Jessica M.</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"My brow lamination turned out perfect! She really takes her time
+                    and makes sure everything looks flawless."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">&mdash; Sophia R.</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"So glad I found Dragonflybar Studio! The volume set is gorgeous and
+                    the studio is so clean and cozy."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">&mdash; Mia L.</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Calendly Booking Section -->
-    <div id="booking" class="booking-container">
-        <div class="services-header">
-            Book Your Appointment
+    <section id="booking" class="booking-section">
+        <div class="section-header fade-in">
+            <p class="section-subtitle">Ready for Your Glow-Up?</p>
+            <h2>Book Your Appointment</h2>
+            <div class="header-line"></div>
         </div>
-        <div class="calendly-placeholder">
-            <!-- Calendly inline widget begin -->
+        <div class="calendly-wrapper fade-in">
             <div class="calendly-inline-widget" data-url="https://calendly.com/antsamudio99/30min"
                 style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-
         </div>
-    </div>
+    </section>
 
+    <!-- Social & Contact Footer -->
+    <footer class="site-footer">
+        <div class="footer-content fade-in">
+            <div class="footer-brand">
+                <h2>Dragonflybar Studio</h2>
+                <p>Enhancing Your Natural Beauty</p>
+                <div class="footer-divider"></div>
+            </div>
 
-
-    <div class="closer">
-
-        <div class="Ctext-section">
-            <h1>Book Now!</h1>
-            <p> Home Based<br>
-                La Palma, CA.<br>
-                Email:
-                <a href="mailto:Miaj.k.04@gmail.com">
-                    Miaj.k.04@gmail.com
-                </a>
-                <br>
-                Instagram:
-                <a href="https://www.instagram.com/dragonflyybar/" target="_blank">
-                    @dragonflyybar
-                </a>
-            </p>
-            <p class="contact">Contact us &rarr;</p>
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <p>Home Based<br>La Palma, CA</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:Miaj.k.04@gmail.com">Miaj.k.04@gmail.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <a href="https://www.instagram.com/dragonflyybar/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        @dragonflyybar
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="Cimage-section">
-            <img src="img/brow4.jpg" alt="Makeup Palette">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dragonflybar Studio. All rights reserved.</p>
         </div>
-
-    </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -149,6 +247,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
