@@ -1,2 +1,8 @@
 .claude/
 img/lRoom.jpg
+
+# Next.js
+.next/
+out/
+node_modules/
+.env*.local
