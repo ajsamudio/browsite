@@ -1,13 +1,14 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
+
+const B = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const slides = [
-  { src: '/img/brow.jpg', alt: 'Lash extensions transformation' },
-  { src: '/img/brow2.jpg', alt: 'Volume lash set before and after' },
-  { src: '/img/brow3.jpg', alt: 'Brow lamination results' },
-  { src: '/img/brow4.jpg', alt: 'Classic lash extensions' },
-  { src: '/img/brow5.jpg', alt: 'Hybrid lash set' },
+  { src: `${B}/img/brow12.jpg`, alt: 'Lash extensions full result' },
+  { src: `${B}/img/brow9.jpg`,  alt: 'Lash and brow extensions result' },
+  { src: `${B}/img/brow3.jpg`,  alt: 'Dramatic lash extensions close-up' },
+  { src: `${B}/img/brow6.jpg`,  alt: 'Classic lashes and brow definition' },
+  { src: `${B}/img/brow11.jpg`, alt: 'Studio lash extensions result' },
 ]
 
 export default function Carousel() {
@@ -22,7 +23,8 @@ export default function Carousel() {
     <div className="carousel">
       {slides.map((slide, i) => (
         <div key={slide.src} className={`carousel-slide${i === active ? ' active' : ''}`}>
-          <Image src={slide.src} alt={slide.alt} fill sizes="500px" priority={i === 0} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={slide.src} alt={slide.alt} />
         </div>
       ))}
       <div className="carousel-dots">

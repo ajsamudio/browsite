@@ -1,6 +1,18 @@
-import Image from 'next/image'
 import Carousel from '../components/Carousel'
 import SiteEffects from '../components/SiteEffects'
+
+const B = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
+const galleryItems = [
+  { src: `${B}/img/brow12.jpg`, alt: 'Full face lash extensions result',        label: 'Lash Extensions'  },
+  { src: `${B}/img/brow9.jpg`,  alt: 'Both eyes with lash and brow definition', label: 'Volume Set'       },
+  { src: `${B}/img/brow.jpg`,   alt: 'Brow lamination close-up result',         label: 'Brow Lamination'  },
+  { src: `${B}/img/brow3.jpg`,  alt: 'Dramatic lash extensions green eye',      label: 'Stargazer Lashes' },
+  { src: `${B}/img/brow6.jpg`,  alt: 'Classic lash extensions and brows',       label: 'Classic Set'      },
+  { src: `${B}/img/brow7.jpg`,  alt: 'Lash extensions close-up result',         label: 'Hybrid Lashes'    },
+  { src: `${B}/img/brow8.jpg`,  alt: 'Volume lash extensions result',           label: 'Volume Lashes'    },
+  { src: `${B}/img/brow11.jpg`, alt: 'Studio lash extensions appointment',      label: 'Lash Extensions'  },
+]
 
 export default function Home() {
   return (
@@ -83,14 +95,10 @@ export default function Home() {
           <div className="header-line"></div>
         </div>
         <div className="gallery-grid">
-          {[
-            { src: '/img/brow.jpg', alt: 'Lash extensions result', label: 'Lash Extensions' },
-            { src: '/img/brow2.jpg', alt: 'Volume lash set result', label: 'Volume Set' },
-            { src: '/img/brow3.jpg', alt: 'Brow lamination result', label: 'Brow Lamination' },
-            { src: '/img/brow5.jpg', alt: 'Classic lashes result', label: 'Classic Lashes' },
-          ].map(({ src, alt, label }) => (
+          {galleryItems.map(({ src, alt, label }) => (
             <div key={src} className="gallery-item fade-in">
-              <Image src={src} alt={alt} fill sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={src} alt={alt} loading="lazy" />
               <div className="gallery-overlay"><span>{label}</span></div>
             </div>
           ))}
