@@ -1,7 +1,8 @@
 import Carousel from '../components/Carousel'
 import SiteEffects from '../components/SiteEffects'
+import BookingWidget from '../components/BookingWidget'
 
-const B = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const B = ''
 
 const galleryItems = [
   { src: `${B}/img/brow12.jpg`, alt: 'Full face lash extensions result',        label: 'Lash Extensions'  },
@@ -145,12 +146,8 @@ export default function Home() {
           <h2>Book Your Appointment</h2>
           <div className="header-line"></div>
         </div>
-        <div className="calendly-wrapper fade-in">
-          <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/antsamudio99/30min"
-            style={{ minWidth: '320px', height: '700px' }}
-          />
+        <div className="booking-widget-wrapper fade-in">
+          <BookingWidget />
         </div>
       </section>
 

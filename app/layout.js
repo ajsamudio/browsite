@@ -1,4 +1,3 @@
-import Script from 'next/script'
 import './globals.css'
 
 export const metadata = {
@@ -62,10 +61,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   )
